@@ -1,0 +1,5 @@
+#include "resource.h"
+
+ICON_MAIN      ICON    DISCARDABLE   brickster.ico
+CHIPTUNE       RCDATA  DISCARDABLE   noticeme.xm
+CRBG           BITMAP  DISCARDABLE   crbg.bmp
