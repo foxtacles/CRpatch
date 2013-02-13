@@ -16,12 +16,12 @@ void CRpatch()
     FILE* engine;
     engine = fopen("Engine.dll", "r+b");
 
-    unsigned char patch[11] = {0xB0, 0x01, 0x5E, 0x5B, 0x81, 0xC4, 0x8C, 0x00, 0x00, 0x00, 0xC3};
+    unsigned char patch[11] = {0xB0, 0x01, 0x5E, 0x5B, 0x81, 0xC4, 0x9C, 0x00, 0x00, 0x00, 0xC3};
 
     if (engine != NULL)
     {
-        // offset 0x19C8D4
-        fseek(engine, 1689812, SEEK_SET);
+        // offset 0x19C26F
+        fseek(engine, 1688175, SEEK_SET);
         fwrite(patch, 1, sizeof(patch), engine);
         fclose(engine);
 
